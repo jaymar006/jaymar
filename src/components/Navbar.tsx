@@ -20,7 +20,8 @@ export default function Navbar() {
         >
             <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 lg:px-8">
                 <a href="#home" className="text-sm font-semibold tracking-[0.25em] uppercase text-muted">
-                    JAY MAR MARTIN
+                    <span className="md:hidden">JM</span>
+                    <span className="hidden md:inline">JAY MAR MARTIN</span>
                 </a>
                 <div className="flex items-center gap-4 text-sm">
                     {links.map((link) => (
