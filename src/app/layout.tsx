@@ -24,13 +24,32 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body className={inter.className}>
-                <div className="relative min-h-screen">
-                    {/* Subtle top light effect (no image) */}
+                <div className="relative min-h-screen overflow-hidden">
+                    {/* Subtle top rectangular light effect (vertical fade) */}
                     <div
-                        className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(circle_at_top,_rgba(99,102,241,0.35),_transparent_65%)]"
+                        className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-gradient-to-b from-primary/25 via-primary/5 to-transparent"
                         aria-hidden="true"
                     />
-                    {children}
+
+                    {/* Floating background orbs */}
+                    <div
+                        className="bubble bg-primary/40 w-40 h-40 -top-16 -left-20"
+                        aria-hidden="true"
+                    />
+                    <div
+                        className="bubble bg-secondary/35 w-44 h-44 top-1/3 -right-16"
+                        style={{ animationDelay: '2s' }}
+                        aria-hidden="true"
+                    />
+                    <div
+                        className="bubble bg-accent/40 w-32 h-32 bottom-4 left-1/5"
+                        style={{ animationDuration: '14s', animationDelay: '1s' }}
+                        aria-hidden="true"
+                    />
+
+                    <div className="relative z-10">
+                        {children}
+                    </div>
                 </div>
             </body>
         </html>

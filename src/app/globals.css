@@ -171,3 +171,25 @@ section {
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
+
+/* Floating bubbles for background */
+@keyframes float-slow {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-30px) translateX(10px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(14px);
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  animation: float-slow 10s ease-in-out infinite;
+}

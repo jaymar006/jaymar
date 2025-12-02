@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -11,6 +12,11 @@ import Contact from '@/components/Contact';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
 
+// Particle background is purely visual and uses randomness, so render it client-side only
+const BackgroundParticles = dynamic(() => import('@/components/BackgroundParticles'), {
+    ssr: false,
+});
+
 export default function Home() {
     const [selectedTechnology, setSelectedTechnology] = useState<string | null>(null);
 
@@ -19,7 +25,8 @@ export default function Home() {
     };
 
     return (
-        <main className="min-h-screen pt-16">
+        <main className="min-h-screen pt-16 relative">
+            <BackgroundParticles />
             <Navbar />
             <Settings />
             <Hero />

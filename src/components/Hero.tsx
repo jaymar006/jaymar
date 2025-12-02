@@ -102,16 +102,29 @@ export default function Hero() {
                         transition={{ delay: 0.3, duration: 0.6 }}
                         className="relative flex justify-center md:justify-end"
                     >
-                        <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
-                            <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-[2rem] blur-2xl opacity-60" />
-                            <div className="absolute -inset-0.5 rounded-[2rem] bg-gradient-to-tr from-primary/40 via-secondary/40 to-accent/40 opacity-60" />
+                        <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 group">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-[2rem] blur-2xl opacity-60 group-hover:opacity-80 transition-smooth" />
+                            <div className="absolute -inset-0.5 rounded-[2rem] bg-gradient-to-tr from-primary/40 via-secondary/40 to-accent/40 opacity-60 group-hover:opacity-90 transition-smooth" />
                             <div className="relative w-full h-full rounded-[1.75rem] bg-[radial-gradient(circle_at_top,_rgba(15,23,42,0.9),_rgba(15,23,42,0.95))] border border-white/10 overflow-hidden flex items-center justify-center">
+                                {/* Default image */}
                                 <Image
                                     src={personalInfo.profileImage}
                                     alt={personalInfo.name}
                                     fill
-                                    className="object-cover rounded-[1.75rem]"
+                                    className="object-cover rounded-[1.75rem] transition-smooth group-hover:opacity-0"
                                     priority
+                                />
+                                {/* Hover image */}
+                                <Image
+                                    src="/profile2.jpg"
+                                    alt={personalInfo.name}
+                                    fill
+                                    className="object-cover rounded-[1.75rem] opacity-0 group-hover:opacity-100 transition-smooth"
+                                />
+                                {/* Soft fade at the bottom to blend into background */}
+                                <div
+                                    className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a0a0f] opacity-80"
+                                    aria-hidden="true"
                                 />
                             </div>
                         </div>
