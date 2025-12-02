@@ -85,10 +85,10 @@ export default function Projects({ selectedTechnology }: ProjectsProps) {
                                     className="card group"
                                 >
                                     {/* Project Image / Icon with subtle background */}
-                                    <div className="relative h-48 mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+                                    <div className="relative h-48 mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-primary/15 to-secondary/15">
                                         {project.backgroundImage && (
                                             <div
-                                                className="absolute inset-0 bg-cover bg-center opacity-25"
+                                                className="absolute inset-0 bg-cover bg-center opacity-20"
                                                 style={{ backgroundImage: `url('${project.backgroundImage}')` }}
                                                 aria-hidden="true"
                                             />
@@ -113,7 +113,7 @@ export default function Projects({ selectedTechnology }: ProjectsProps) {
                                         {project.technologies.map((tech) => (
                                             <span
                                                 key={tech}
-                                                className="px-3 py-1 text-xs rounded-full glass"
+                                                className="px-3 py-1 text-xs rounded-full glass border border-transparent hover:border-primary/60 hover:text-primary transition-smooth"
                                             >
                                                 {tech}
                                             </span>

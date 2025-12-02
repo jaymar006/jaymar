@@ -11,95 +11,123 @@ export default function Hero() {
     };
 
     return (
-        <section className="min-h-screen flex items-center justify-center relative">
+        <section id="home" className="min-h-[80vh] flex items-center relative">
             {/* Background gradient effects */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float" />
-                <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+                <div className="absolute -top-24 -left-24 w-80 h-80 bg-primary/25 rounded-full blur-3xl animate-float" />
+                <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
             </div>
 
-            <div className="relative z-10 text-center px-4">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                    className="mb-8"
-                >
-                    <div className="relative w-48 h-48 mx-auto mb-6">
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-md opacity-75" />
-                        <Image
-                            src={personalInfo.profileImage}
-                            alt={personalInfo.name}
-                            width={192}
-                            height={192}
-                            className="relative rounded-full border-4 border-primary/50 object-cover"
-                            priority
-                        />
-                    </div>
-                </motion.div>
-
-                <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.5 }}
-                    className="text-5xl md:text-7xl font-bold mb-4"
-                >
-                    Hi, I&apos;m <span className="gradient-text">{personalInfo.name}</span>
-                </motion.h1>
-
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4, duration: 0.5 }}
-                    className="text-xl md:text-2xl text-muted mb-8 max-w-2xl mx-auto"
-                >
-                    {personalInfo.tagline}
-                </motion.p>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6, duration: 0.5 }}
-                    className="flex gap-4 justify-center mb-12"
-                >
-                    <a
-                        href={personalInfo.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-3 glass rounded-full hover:bg-primary/20 transition-smooth"
-                        aria-label="GitHub"
-                    >
-                        <Github size={24} />
-                    </a>
-                    {personalInfo.linkedin && (
-                        <a
-                            href={personalInfo.linkedin}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="p-3 glass rounded-full hover:bg-primary/20 transition-smooth"
-                            aria-label="LinkedIn"
+            <div className="relative z-10 w-full max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+                <div className="grid md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-10 items-center">
+                    {/* Text side */}
+                    <div>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1, duration: 0.5 }}
+                            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
                         >
-                            <Linkedin size={24} />
-                        </a>
-                    )}
-                    <a
-                        href={`mailto:${personalInfo.email}`}
-                        className="p-3 glass rounded-full hover:bg-primary/20 transition-smooth"
-                        aria-label="Email"
+                            Hi, I&apos;m <span className="gradient-text">{personalInfo.name}</span>
+                        </motion.h1>
+
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.25, duration: 0.5 }}
+                            className="text-lg md:text-2xl text-muted mb-8 max-w-xl leading-relaxed"
+                        >
+                            {personalInfo.tagline}
+                        </motion.p>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4, duration: 0.5 }}
+                            className="flex flex-wrap items-center gap-4 mb-10"
+                        >
+                            <a href="#projects" className="btn-primary">
+                                View Projects
+                            </a>
+                            <a href="#contact" className="btn-secondary">
+                                Let&apos;s Talk
+                            </a>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.55, duration: 0.5 }}
+                            className="flex gap-4 items-center"
+                        >
+                            <span className="text-sm text-muted uppercase tracking-[0.2em]">
+                                Find me on
+                            </span>
+                            <div className="flex gap-3">
+                                <a
+                                    href={personalInfo.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-2 glass rounded-full hover:bg-primary/20 transition-smooth"
+                                    aria-label="GitHub"
+                                >
+                                    <Github size={20} />
+                                </a>
+                                {personalInfo.linkedin && (
+                                    <a
+                                        href={personalInfo.linkedin}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="p-2 glass rounded-full hover:bg-primary/20 transition-smooth"
+                                        aria-label="LinkedIn"
+                                    >
+                                        <Linkedin size={20} />
+                                    </a>
+                                )}
+                                <a
+                                    href={`mailto:${personalInfo.email}`}
+                                    className="p-2 glass rounded-full hover:bg-primary/20 transition-smooth"
+                                    aria-label="Email"
+                                >
+                                    <Mail size={20} />
+                                </a>
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    {/* Image side */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 40 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.3, duration: 0.6 }}
+                        className="relative flex justify-center md:justify-end"
                     >
-                        <Mail size={24} />
-                    </a>
-                </motion.div>
+                        <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-[2rem] blur-2xl opacity-60" />
+                            <div className="absolute -inset-0.5 rounded-[2rem] bg-gradient-to-tr from-primary/40 via-secondary/40 to-accent/40 opacity-60" />
+                            <div className="relative w-full h-full rounded-[1.75rem] bg-[radial-gradient(circle_at_top,_rgba(15,23,42,0.9),_rgba(15,23,42,0.95))] border border-white/10 overflow-hidden flex items-center justify-center">
+                                <Image
+                                    src={personalInfo.profileImage}
+                                    alt={personalInfo.name}
+                                    fill
+                                    className="object-cover rounded-[1.75rem]"
+                                    priority
+                                />
+                            </div>
+                        </div>
+                    </motion.div>
+                </div>
 
                 <motion.button
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.8, duration: 0.5 }}
+                    transition={{ delay: 0.9, duration: 0.5 }}
                     onClick={scrollToAbout}
-                    className="animate-bounce"
+                    className="mt-12 inline-flex items-center gap-2 text-sm text-muted hover:text-primary transition-smooth"
                     aria-label="Scroll to about section"
                 >
-                    <ArrowDown size={32} className="text-primary" />
+                    <ArrowDown size={20} className="animate-bounce" />
+                    Scroll to about
                 </motion.button>
             </div>
         </section>

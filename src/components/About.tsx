@@ -31,7 +31,7 @@ export default function About() {
                 </h2>
 
                 <div className="card max-w-3xl mx-auto">
-                    <p className="text-lg text-muted leading-relaxed mb-6">
+                    <p className="text-lg text-muted leading-relaxed mb-6 max-w-2xl mx-auto">
                         {aboutContent.short}
                     </p>
 
@@ -44,7 +44,7 @@ export default function About() {
                                 transition={{ duration: 0.3 }}
                                 className="overflow-hidden"
                             >
-                                <p className="text-lg text-muted leading-relaxed mb-6">
+                                <p className="text-lg text-muted leading-relaxed mb-6 max-w-2xl mx-auto">
                                     {aboutContent.full}
                                 </p>
                             </motion.div>
