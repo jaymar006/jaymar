@@ -84,13 +84,15 @@ export default function Projects({ selectedTechnology }: ProjectsProps) {
                                     transition={{ delay: index * 0.1, duration: 0.3 }}
                                     className="card group"
                                 >
-                                    {/* Project Image */}
+                                    {/* Project Image / Icon */}
                                     <div className="relative h-48 mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
-                                        <div className="absolute inset-0 flex items-center justify-center text-6xl opacity-50">
-                                            {project.technologies[0] === 'React' ? '⚛️' :
-                                                project.technologies[0] === 'Django' ? '🎸' :
-                                                    project.technologies[0] === 'Next.js' ? '▲' : '💻'}
-                                        </div>
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            fill
+                                            className="object-contain p-6 transition-smooth group-hover:scale-105"
+                                            priority={index === 0}
+                                        />
                                     </div>
 
                                     {/* Project Info */}

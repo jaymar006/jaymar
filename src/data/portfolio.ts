@@ -9,7 +9,8 @@ export interface Project {
     title: string;
     description: string;
     longDescription: string;
-    image: string;
+    image: string; // logo / main icon
+    backgroundImage?: string; // optional background image
     technologies: string[];
     liveUrl?: string;
     githubUrl?: string;
@@ -85,6 +86,7 @@ export const projects: Project[] = [
         description: 'A jail visitation system with QR code recording and prisoner management',
         longDescription: 'A jail visitation system that lets the visitor be recorded online with the use of QR Code, Records of prisoners and also has capability to create ID.',
         image: '/projects/jail.svg',
+        backgroundImage: '/projects/jail-bg.png',
         technologies: ['React', 'CSS', 'JavaScript', 'HTML', 'Node.js', 'Express.js', 'Docker'],
         liveUrl: 'https://jail-deployment.onrender.com',
         githubUrl: 'https://github.com/jaymar006/Jail-Deployment',
@@ -95,7 +97,8 @@ export const projects: Project[] = [
         title: 'AACbay',
         description: 'Android app for deaf and CNN individuals using N-gram model',
         longDescription: 'A Android Application for deaf and CNN individuals, the app uses pictogram and speech to text functionalities to help people with CNN and in Deaf community communicate. The app uses N-gram technology to better predict and suggest the next pictogram that\'ll be used.',
-        image: '/projects/aacbay.svg',
+        image: '/projects/aacbaylogo.png',
+        backgroundImage: '/projects/aacbay-bg.png',
         technologies: ['Android Studio', 'Kotlin'],
         liveUrl: 'https://github.com/jaymar006/Thesis-AACbay/releases/tag/v1.0.1',
         githubUrl: 'https://github.com/jaymar006/Thesis-AACbay',
@@ -106,7 +109,8 @@ export const projects: Project[] = [
         title: 'Altairs: Library Management System',
         description: 'Library management system converted to desktop app using Electron',
         longDescription: 'A Web Application that has been converted to Desktop Application with the use of electron. This app lets you record books, students and use qr code for identifying which is which. It also records books borrowed and a rewarding system.',
-        image: '/projects/altairs.svg',
+        image: '/projects/logonglittleheirs.png',
+        backgroundImage: '/projects/bglittle.png',
         technologies: ['JavaScript', 'SQLite', 'HTML', 'CSS', 'Node.js', 'Express.js', 'Tailwind'],
         githubUrl: 'https://github.com/jaymar006/library-system-prod',
         featured: true,
