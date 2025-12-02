@@ -123,7 +123,7 @@ export const projects: Project[] = [
             'WikiCreatures is a Django-powered knowledge base for cataloging creatures, their traits, habitats, and related lore. It features structured entries, search and filtering, and an admin interface for managing the bestiary content. The project is backed by SQLite for development and deployed on PythonAnywhere, showcasing full-stack skills in Python, Django, database modeling, and production deployment.',
         image: '/projects/wikicreatureslogo.svg',
         backgroundImage: '/projects/wikicreatures-bg.png',
-        technologies: ['SQLite', 'Python', 'PythonAnywhere', 'Django'],
+        technologies: ['SQLite', 'Python', 'PythonAnywhere', 'Django', 'HTML', 'CSS', 'JavaScript', 'Bootstrap'],
         githubUrl: 'https://github.com/jaymar006/WikiCreatures',
         featured: true,
     },
