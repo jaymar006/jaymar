@@ -1,0 +1,8 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f0f0f0"/>
+  <rect x="250" y="50" width="300" height="500" rx="30" fill="#fff" stroke="#333" stroke-width="10"/>
+  <text x="400" y="250" font-family="Arial" font-size="40" fill="#3DDC84" text-anchor="middle">AACbay</text>
+  <circle cx="400" cy="350" r="50" fill="#3DDC84" opacity="0.5"/>
+  <circle cx="350" cy="350" r="30" fill="#7F52FF" opacity="0.5"/>
+  <circle cx="450" cy="350" r="30" fill="#F2C811" opacity="0.5"/>
+</svg>
