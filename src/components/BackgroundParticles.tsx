@@ -65,7 +65,7 @@ export default function BackgroundParticles() {
 
         frameId = requestAnimationFrame(loop);
         return () => cancelAnimationFrame(frameId);
-    }, []);
+    }, [isPressed]);
 
     return (
         <div className="pointer-events-none fixed inset-0 -z-10">
