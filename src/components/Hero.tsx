@@ -18,6 +18,19 @@ export default function Hero() {
                 <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
             </div>
 
+            {/* Mobile-only background image using profile2 */}
+            <div
+                className="absolute inset-0 md:hidden opacity-25"
+                style={{
+                    backgroundImage: "url('/profile.png')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+                aria-hidden="true"
+            />
+            {/* Dark overlay for readability */}
+            <div className="absolute inset-0 md:hidden bg-gradient-to-b from-black/70 via-black/60 to-black/80" aria-hidden="true" />
+
             <div className="relative z-10 w-full max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
                 <div className="grid md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-10 items-center">
                     {/* Text side */}
@@ -95,12 +108,12 @@ export default function Hero() {
                         </motion.div>
                     </div>
 
-                    {/* Image side */}
+                    {/* Image side (desktop & tablet only) */}
                     <motion.div
                         initial={{ opacity: 0, x: 40 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.3, duration: 0.6 }}
-                        className="relative flex justify-center md:justify-end"
+                        className="relative hidden md:flex justify-center md:justify-end"
                     >
                         <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 group">
                             <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-[2rem] blur-2xl opacity-60 group-hover:opacity-80 transition-smooth" />
