@@ -84,13 +84,20 @@ export default function Projects({ selectedTechnology }: ProjectsProps) {
                                     transition={{ delay: index * 0.1, duration: 0.3 }}
                                     className="card group"
                                 >
-                                    {/* Project Image / Icon */}
+                                    {/* Project Image / Icon with subtle background */}
                                     <div className="relative h-48 mb-4 rounded-lg overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+                                        {project.backgroundImage && (
+                                            <div
+                                                className="absolute inset-0 bg-cover bg-center opacity-25"
+                                                style={{ backgroundImage: `url('${project.backgroundImage}')` }}
+                                                aria-hidden="true"
+                                            />
+                                        )}
                                         <Image
                                             src={project.image}
                                             alt={project.title}
                                             fill
-                                            className="object-contain p-6 transition-smooth group-hover:scale-105"
+                                            className="relative object-contain p-6 transition-smooth group-hover:scale-105"
                                             priority={index === 0}
                                         />
                                     </div>
