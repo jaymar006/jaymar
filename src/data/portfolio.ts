@@ -99,7 +99,7 @@ export const projects: Project[] = [
         longDescription: 'A Android Application for deaf and CNN individuals, the app uses pictogram and speech to text functionalities to help people with CNN and in Deaf community communicate. The app uses N-gram technology to better predict and suggest the next pictogram that\'ll be used.',
         image: '/projects/aacbaylogo.png',
         backgroundImage: '/projects/aacbaybg.jpg',
-        technologies: ['Android Studio', 'Kotlin'],
+        technologies: ['Android Studio', 'Kotlin', 'Android SDK', 'Firebase', 'Cloudinary'],
         liveUrl: 'https://github.com/jaymar006/Thesis-AACbay/releases/tag/v1.0.1',
         githubUrl: 'https://github.com/jaymar006/Thesis-AACbay',
         featured: true,
