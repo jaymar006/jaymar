@@ -133,8 +133,8 @@ export const projects: Project[] = [
         description: 'A web application for managing emergency response teams and their operations',
         longDescription:
             'Emergency Response Team IMS is a comprehensive web application designed to facilitate the organization and management of emergency response teams and their operations. The system enables users to create and coordinate teams, assign tasks, monitor ongoing missions, and manage resources efficiently. Built with usability in mind, the platform streamlines communications and record-keeping for responders, helping ensure timely and effective action during critical incidents. This project demonstrates skills in backend and frontend development, user interface design, and process automation for emergency services.',
-        image: '/projects/wikicreatureslogo.svg',
-        backgroundImage: '/projects/cdmlogo.png',
+        image: '/projects/cdmlogo.png',
+        backgroundImage: '/projects/cdmbackground.png',
         technologies: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'Tailwind'],
         githubUrl: 'https://github.com/kaezzu/System',
         featured: true,
