@@ -63,6 +63,7 @@ export const technologies: Technology[] = [
     { name: 'Node.js', icon: 'FaNodeJs', category: 'backend' },
     { name: 'Express.js', icon: 'SiExpress', category: 'backend' },
     { name: 'C#', icon: 'TbBrandCSharp', category: 'backend' },
+    { name: '8th Wall', icon: 'Si8thwall', category: 'backend' }, // 8n8, possible AR/VR/other tool interpreted as per prompt
 
     // Database
     { name: 'PostgreSQL', icon: 'SiPostgresql', category: 'database' },
@@ -76,7 +77,7 @@ export const technologies: Technology[] = [
     { name: 'Android Studio', icon: 'SiAndroidstudio', category: 'tools' },
     { name: 'Kotlin', icon: 'SiKotlin', category: 'tools' },
     { name: 'Power BI', icon: 'FaChartBar', category: 'tools' },
-];
+    { name: '8n8', icon: 'FaInfinity', category: 'tools' }, // Added per your request, mapped to best match icon
 
 // Projects
 export const projects: Project[] = [
